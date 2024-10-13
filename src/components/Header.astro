@@ -1,0 +1,38 @@
+---
+
+---
+
+<header>
+    <a href="/index"><img src="" alt="Logo"></a>
+    <nav>
+            <ul class="menu">
+                <li><a href="/index">FRONTPAGE</a></li>
+                <li><a href="/lineup">LINE-UP</a></li>
+                <li><a href="#">TICKETS</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+</header>
+
+<script>
+    const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu");
+const links = document.querySelectorAll(".menu li a");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  });
+});
+</script>
