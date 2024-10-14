@@ -1,67 +1,65 @@
 ---
-import Button from "../components/Button.astro"
-import Bubble from "../components/Bubble.astro"
+import Button from "../components/Button.astro";
+import Bubble from "../components/Bubble.astro";
 import "../styles/global.css";
 ---
 
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Karrusel Festival</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <header>
+      <Button />
+      <Button />
+      // revolving banner
+    </header>
+    <main>
+      <p>
+        3 days of house, disco and techno in the woods. <br />
+
+        36 artists across 3 stages including Anetha, Ben Böhmer, HorsegiirL, Job
+        Jobse, Ki/Ki, Marlon Hoffstadt, Nene H, Sama'Abdulhadi, Viken Arman, X
+        CLUB. <br />
+
+        Karrusel takes place at a secluded green spot on Refshaleøen in central
+        Copenhagen.
+      </p>
+      <div class="button_grid">
+        <Bubble />
+        <Bubble />
+        <Bubble />
+        <Bubble />
+        <Bubble />
+      </div>
+      <div class="drug_box">
+        <h2>DRUG POLICY</h2>
+        <p>
+          It's not allowed to do drugs at Karrusel. If you or someone feels bad,
+          go to the First Aid and Awareness Team tent and they will assist you.
+          They are experienced and will provide advice about drugs, alcohol,
+          legal highs for anything that is troubling you in full
+          confidentiality. First Aid and Awareness Team tents are located close
+          to Tribunen. Ask any festival staff and they will guide you.
+        </p>
+      </div>
+      <h2>CHECK OUT THE FESTIVAL GROUNDS</h2>
+      <img src="" alt="Map" />
+    </main>
   </body>
-=======
-<head>
-	 <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Karrusel Festival</title>
-</head>
-<body>
-	<header>
-	<Button/>
-	<Button/>
-// revolving banner
-</header>
-<main>
-<p>3 days of house, disco and techno in the woods. <br>
-
-36 artists across 3 stages including Anetha, Ben Böhmer, HorsegiirL, Job Jobse, Ki/Ki, Marlon Hoffstadt, Nene H, Sama'Abdulhadi, Viken Arman, X CLUB. <br>
-
-Karrusel takes place at a secluded green spot on Refshaleøen in central Copenhagen.</p>
-<div class="button_grid">
-	<Bubble/>
-	<Bubble/>
-	<Bubble/>
-	<Bubble/>
-	<Bubble/>
-</div>
-<div class="drug_box">
-	<h2>DRUG POLICY</h2>
-	<p>It's not allowed to do drugs at Karrusel. If you or someone feels bad, go to the First Aid and Awareness Team tent and they will assist you. They are experienced and will provide advice about drugs, alcohol, legal highs for anything that is troubling you in full confidentiality. First Aid and Awareness Team tents are located close to Tribunen. Ask any festival staff and they will guide you.</p>
-</div>
-<h2>CHECK OUT THE FESTIVAL GROUNDS</h2>
-<img src="" alt="Map">
-</main>
-</body>
->>>>>>> d183f6d9fbc50a49f5ffa67eca8404177af4ca52
 </html>
 
-
 <style>
-	header{
-		background-image: url();
-	}
-	.button_grid {
-		display: grid;
-		grid-column: repeat(6*1fr);
-		grid-template-rows: 1fr 1fr;
-	}
+  header {
+    background-image: url();
+  }
+  .button_grid {
+    display: grid;
+    grid-column: repeat(6 * 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
 </style>
