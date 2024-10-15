@@ -17,8 +17,46 @@
             <p>info@nusnus.dk <br> Refshalevej 185, 1432 København <br> Job & praktik <br> Presse</p>
         </div>
     </div>
+    <hr>
+    <div class="bottom">
     <img src="" alt="Logo">
-    <img src="" alt="Icon">
-    <img src="" alt="Icon">
+    <img class="icons" src="/fb_icon.png" alt="Icon">
+    <img class="icons" src="/ig_icon.png" alt="Icon">
+    </div>
     <p>2024 Karrusel Festival Gruppen</p>
 </footer>
+
+<style>
+    footer {
+        background-color: var(--bg-light);
+        padding-bottom: 2rem;
+    }
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 3rem;
+    }
+    p {
+        text-align: center;
+        font-family: var(--font-h2);
+    }
+    h5 {
+        text-align: center;
+        margin: 2rem;
+        padding-top: 1rem;
+    }
+    hr {
+       width: 100%;
+       size: 2;
+    }
+    .bottom {
+        display: grid;
+        grid-template-columns: 2fr 0.5fr 0.5fr 8fr;
+        margin: 3rem;
+    }
+
+    .icons {
+        width: 26px;
+        height: 25px;
+    }
+</style>

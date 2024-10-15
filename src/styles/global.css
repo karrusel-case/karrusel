@@ -20,6 +20,7 @@ html {
   --font-size-h1: 128px;
   --font-size-h2: 64px;
   --font-size-h3: 48px;
+  --font-size-h5: 24px;
   --font-size-p: 20px;
 
   /* Spacing */
@@ -39,6 +40,7 @@ html {
   --secondary-color: #0095ff;
   --tertiary-color: #ae00ff;
   --text-color: #fff;
+  --bg-light: #4d3581;
 }
 
 h1 {
@@ -55,6 +57,12 @@ h3 {
   font-size: var(--font-size-h3);
   color: var(--text-color);
   font-family: var(--font-h3);
+}
+h5 {
+  font-size: var(--font-size-h5);
+  color: var(--text-color);
+  font-family: var(--font-h2);
+  font-weight: 300;
 }
 p {
   font-size: var(--font-size-p);
