@@ -14,9 +14,27 @@ import "../styles/global.css";
   </head>
   <body>
     <header>
-      <Button />
-      <Button />
-      // revolving banner
+      <div class="header-content">
+        <h1>KARRUSEL</h1>
+        <div class="buttons">
+          <Button variant="primary-btn">LINE-UP</Button>
+          <Button variant="primary-btn">TICKETS</Button>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="slide-container">
+          <p>28-30 AUGUST 2025</p>
+          <p>&#183;</p>
+          <p>28-30 AUGUST 2025</p>
+          <p>&#183;</p>
+          <p>28-30 AUGUST 2025</p>
+          <p>&#183;</p>
+          <p>28-30 AUGUST 2025</p>
+          <p>&#183;</p>
+          <p>28-30 AUGUST 2025</p>
+          <p>&#183;</p>
+        </div>
+      </div>
     </header>
     <main>
       <p>
@@ -55,8 +73,57 @@ import "../styles/global.css";
 
 <style>
   header {
-    background-image: url();
+    background-image: url(img/header.png);
+    height: 750px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
+
+  .header-content {
+    padding-top: 15%;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #4d3581;
+    height: 90px;
+    margin-top: auto;
+  }
+
+  .slide-container {
+    display: flex;
+    animation: slide 53s linear infinite;
+    white-space: nowrap;
+  }
+  .banner p {
+    padding: 0 0.5em;
+    font: var(--font-h2);
+    font-size: var(--font-size-h2);
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .dot {
+    font-weight: bolder;
+  }
+
   .button_grid {
     display: grid;
     grid-column: repeat(6 * 1fr);

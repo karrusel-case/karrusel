@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+
+const { variant } = Astro.props;
+---
+
+<a class={variant} href=""> <slot /> </a>
+
+<style>
+  a {
+    text-align: center;
+    font-family: "Arimo";
+    font-size: 48px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .primary-btn {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+  }
+
+  .primary-btn:hover {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 3px solid var(--text-color);
+  }
+
+  .secondary-btn {
+    color: var(--secondary-color);
+    border: 3px solid var(--secondary-color);
+  }
+
+  .secondary-btn:hover {
+    color: var(--text-color);
+    background-color: var(--text-color);
+  }
+</style>
