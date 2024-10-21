@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Jx Tabe Demo";
+  src: url(/fonts/jxtabedemo-regular-webfont.woff2) format('woff2');
+}
+
 * {
   margin: 0;
   padding: 0;
