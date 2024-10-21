@@ -23,68 +23,87 @@ import "../styles/global.css";
       </div>
       <div class="banner">
         <div class="slide-container">
-          <p>28-30 AUGUST 2025</p>
+          <p class="blue">28-30 AUGUST 2025</p>
           <p>&#183;</p>
-          <p>28-30 AUGUST 2025</p>
+          <p class="pink">28-30 AUGUST 2025</p>
           <p>&#183;</p>
-          <p>28-30 AUGUST 2025</p>
+          <p class="blue">28-30 AUGUST 2025</p>
           <p>&#183;</p>
-          <p>28-30 AUGUST 2025</p>
+          <p class="pink">28-30 AUGUST 2025</p>
           <p>&#183;</p>
-          <p>28-30 AUGUST 2025</p>
+          <p class="blue">28-30 AUGUST 2025</p>
+          <p>&#183;</p>
+          <p class="pink">28-30 AUGUST 2025</p>
           <p>&#183;</p>
         </div>
       </div>
     </header>
     <main>
-      <p>
-        3 days of house, disco and techno in the woods. <br />
+      <section id="section1">
+        <p class="box">
+          3 days of house, disco and techno in the woods. <br />
 
-        36 artists across 3 stages including Anetha, Ben Böhmer, HorsegiirL, Job
-        Jobse, Ki/Ki, Marlon Hoffstadt, Nene H, Sama'Abdulhadi, Viken Arman, X
-        CLUB. <br />
+          36 artists across 3 stages including Anetha, Ben Böhmer, HorsegiirL,
+          Job Jobse, Ki/Ki, Marlon Hoffstadt, Nene H, Sama'Abdulhadi, Viken
+          Arman, X CLUB. <br />
 
-        Karrusel takes place at a secluded green spot on Refshaleøen in central
-        Copenhagen.
-      </p>
-      <div class="button_grid">
-        <Bubble />
-        <Bubble />
-        <Bubble />
-        <Bubble />
-        <Bubble />
-      </div>
-      <div class="drug_box">
-        <h2>DRUG POLICY</h2>
-        <p>
-          It's not allowed to do drugs at Karrusel. If you or someone feels bad,
-          go to the First Aid and Awareness Team tent and they will assist you.
-          They are experienced and will provide advice about drugs, alcohol,
-          legal highs for anything that is troubling you in full
-          confidentiality. First Aid and Awareness Team tents are located close
-          to Tribunen. Ask any festival staff and they will guide you.
+          Karrusel takes place at a secluded green spot on Refshaleøen in
+          central Copenhagen.
         </p>
-      </div>
-      <h2>CHECK OUT THE FESTIVAL GROUNDS</h2>
-      <img src="" alt="Map" />
+      </section>
+      <section id="section2">
+        <div class="button_grid">
+          <div class="grid1">
+            <Bubble>FAQ</Bubble>
+            <Bubble>VOLUNTEER</Bubble>
+            <Bubble>GALLERY</Bubble>
+          </div>
+          <div class="grid2">
+            <Bubble>LOST & FOUND</Bubble>
+            <Bubble>FORMER YEARS</Bubble>
+          </div>
+        </div>
+      </section>
+      <section id="section4">
+        <div class="box">
+          <h2>DRUG POLICY</h2>
+          <p>
+            It's not allowed to do drugs at Karrusel. If you or someone feels
+            bad, go to the First Aid and Awareness Team tent and they will
+            assist you. They are experienced and will provide advice about
+            drugs, alcohol, legal highs for anything that is troubling you in
+            full confidentiality. First Aid and Awareness Team tents are located
+            close to Tribunen. Ask any festival staff and they will guide you.
+          </p>
+        </div>
+      </section>
+      <section id="section5">
+        <h2>CHECK OUT THE FESTIVAL GROUNDS</h2>
+        <img src="img/map.png" alt="map" />
+      </section>
     </main>
   </body>
 </html>
 
 <style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   header {
     background-image: url(img/header.png);
+    background-position: center;
     height: 750px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
   }
 
   .header-content {
     padding-top: 15%;
   }
-  h1 {
+  h1,
+  h2 {
     text-align: center;
   }
 
@@ -99,11 +118,12 @@ import "../styles/global.css";
     background-color: #4d3581;
     height: 90px;
     margin-top: auto;
+    overflow: hidden;
   }
 
   .slide-container {
     display: flex;
-    animation: slide 53s linear infinite;
+    animation: slide 35s linear infinite;
     white-space: nowrap;
   }
   .banner p {
@@ -113,20 +133,91 @@ import "../styles/global.css";
   }
   @keyframes slide {
     0% {
-      transform: translateX(0%);
+      transform: translateX(1%);
     }
     100% {
       transform: translateX(-100%);
     }
+  }
+  .pink {
+    color: var(--primary-color);
+  }
+
+  .blue {
+    color: var(--secondary-color);
   }
 
   .dot {
     font-weight: bolder;
   }
 
-  .button_grid {
-    display: grid;
-    grid-column: repeat(6 * 1fr);
-    grid-template-rows: 1fr 1fr;
+  .box {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    margin: var(--space-xl) auto;
+    padding: var(--space-xl);
+    border: 5px solid var(--tertiary-color);
+  }
+
+  img {
+    width: 60%;
+    margin: auto;
+  }
+
+  #section1,
+  #section2,
+  #section3,
+  #section4,
+  #section5 {
+    padding-top: var(--space-xxxl);
+    padding-bottom: var(--space-xxxl);
+  }
+
+  @media (max-width: 699px) {
+    .header-content {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .box {
+      margin: var(--space-lg);
+    }
+
+    .btn {
+      margin-top: var(--space-md);
+    }
+  }
+
+  @media (min-width: 700px) {
+    .button_grid {
+      display: grid;
+      justify-content: center;
+    }
+
+    .grid1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      margin: auto;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      margin: auto;
+    }
   }
 </style>

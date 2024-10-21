@@ -1,0 +1,33 @@
+---
+const { variant } = Astro.props;
+---
+
+<a class={variant} href="#">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="360"
+    height="298"
+    viewBox="0 0 360 298"
+    fill="none"
+  >
+    <path
+      d="M360 162.89C360 253.549 259.832 298 160.421 298C61.0098 298 15.1579 256.331 0 162.89C0 72.2309 144.378 0 243.789 0C343.201 0 360 72.2309 360 162.89Z"
+      fill="#ED3A72"></path>
+    <text
+      x="50%"
+      y="50%"
+      dominant-baseline="middle"
+      text-anchor="middle"
+      font-size="32"
+      fill="white"
+    >
+      <slot />
+    </text>
+  </svg>
+</a>
+
+<style>
+  svg {
+    margin: var(--space-lg);
+  }
+</style>
