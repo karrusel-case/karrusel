@@ -1,12 +1,34 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
 import "../styles/global.css";
 ---
-<html lang="en">
-<head>
-	 <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Karrusel Festival</title>
-</head>
+
+<BaseLayout>
+    <main>
+        <h1>LINE-UP</h1>
+        <div class="artists">
+            <div class="big">
+                <h3></h3>
+            </div>
+            <div class="small">
+                <h4></h4>
+            </div>
+        </div>
+        <h2>PROGRAM</h2>
+        <div class="date_grid">
+            <Button/>
+            <Button/>
+            <Button/>
+        </div>
+        <div class="program_grid">
+
+        </div>
+    </main>
+</BaseLayout>
+
+<style>
+	h1{
+        text-align: center;
+    }
+</style>
