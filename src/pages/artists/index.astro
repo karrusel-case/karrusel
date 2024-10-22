@@ -1,1 +1,40 @@
-lineup side herind + fetch 
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+import Card from "../../components/Card.astro";
+import "../../styles/global.css";
+
+const artists = await fetch("https://dddvlaithoterjghgqjy.supabase.co/rest/v1/Artist", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkZHZsYWl0aG90ZXJqZ2hncWp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDU5NjMsImV4cCI6MjA0NTA4MTk2M30.7vdc58-wObQrbkV38YpubtO1fR06ID2gX8iR1vMH_rw",
+  },
+}).then((res) => res.json());
+---
+
+<BaseLayout>
+  <main>
+    <h1>LINE-UP</h1>
+    <div class="artists">
+      <div class="big">
+        <h3></h3>
+      </div>
+      <div class="small">
+        <h4></h4>
+      </div>
+    </div>
+    <h2>PROGRAM</h2>
+    <div class="date_grid">
+      <Button />
+      <Button />
+      <Button />
+    </div>
+    <ul>
+      {
+        artists.map((artist) => {
+          return <Card artist={artist} />;
+        })
+      }
+    </ul>
+  </main>
+</BaseLayout>
