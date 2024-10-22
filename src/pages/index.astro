@@ -11,9 +11,12 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-	  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Karrusel Festival</title>
   </head>
   <body>
@@ -21,24 +24,24 @@ import "../styles/global.css";
       <div class="header-content">
         <h1>KARRUSEL</h1>
         <div class="buttons">
-          <Button variant="primary-btn">LINE-UP</Button>
+          <Button variant="primary-btn" link="/lineup">LINE-UP</Button>
           <Button variant="primary-btn">TICKETS</Button>
         </div>
       </div>
       <div class="banner">
         <div class="slide-container">
-          <p class="blue">28-30 AUGUST 2025</p>
-          <p>&#183;</p>
-          <p class="pink">28-30 AUGUST 2025</p>
-          <p>&#183;</p>
-          <p class="blue">28-30 AUGUST 2025</p>
-          <p>&#183;</p>
-          <p class="pink">28-30 AUGUST 2025</p>
-          <p>&#183;</p>
-          <p class="blue">28-30 AUGUST 2025</p>
-          <p>&#183;</p>
-          <p class="pink">28-30 AUGUST 2025</p>
-          <p>&#183;</p>
+          <h2 class="blue">28-30 AUGUST 2025</h2>
+          <h2>&#183;</h2>
+          <h2 class="pink">28-30 AUGUST 2025</h2>
+          <h2>&#183;</h2>
+          <h2 class="blue">28-30 AUGUST 2025</h2>
+          <h2>&#183;</h2>
+          <h2 class="pink">28-30 AUGUST 2025</h2>
+          <h2>&#183;</h2>
+          <h2 class="blue">28-30 AUGUST 2025</h2>
+          <h2>&#183;</h2>
+          <h2 class="pink">28-30 AUGUST 2025</h2>
+          <h2>&#183;</h2>
         </div>
       </div>
     </header>
@@ -131,10 +134,9 @@ import "../styles/global.css";
     animation: slide 35s linear infinite;
     white-space: nowrap;
   }
-  .banner p {
+  .banner h2 {
     padding: 0 0.5em;
-    font: var(--font-h2);
-    font-size: var(--font-size-h2);
+    font-weight: 100;
   }
   @keyframes slide {
     0% {

@@ -2,9 +2,10 @@
 import "../styles/global.css";
 
 const { variant } = Astro.props;
+const { link } = Astro.props;
 ---
 
-<a class={variant} href=""> <slot /> </a>
+<a class={variant} href={link}> <slot /> </a>
 
 <style>
   a {
