@@ -1,8 +1,9 @@
 ---
 const { variant } = Astro.props;
+const { link } = Astro.props;
 ---
 
-<a class={variant} href="#">
+<a class={variant} href={link}>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="360"
@@ -30,5 +31,6 @@ const { variant } = Astro.props;
   svg {
     margin: var(--space-lg);
     font-family: var(--font-h2);
+    text-decoration: none;
   }
 </style>
