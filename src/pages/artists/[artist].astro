@@ -1,1 +1,19 @@
-copy paste fra slides + indhold fra artist
+---
+export async function getStaticPaths() {
+  const artists = await fetch("https://dddvlaithoterjghgqjy.supabase.co/rest/v1/Artist", {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkZHZsYWl0aG90ZXJqZ2hncWp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDU5NjMsImV4cCI6MjA0NTA4MTk2M30.7vdc58-wObQrbkV38YpubtO1fR06ID2gX8iR1vMH_rw",
+    },
+  }).then((res) => res.json());
+
+  return artists.map((artist) => ({
+    params: { artist: artist.slug }, // [artist]=artist.slug
+    props: { myData: artist }, // send al data med som props
+  }));
+}
+
+const { myData } = Astro.props;
+console.log(myData); // artist.name, artist.image osv.
+---
+
+<h1>{Artist.name}</h1>
