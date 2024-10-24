@@ -33,9 +33,11 @@ console.log(myData); // artist.name, artist.image osv.
     <div class="artist_box">
       <div>
         <a href="/artists"><i></i> GO BACK</a>
-        <img src={myData.image} alt="Kunstnerbillede" />
-        <div class="btn">
-          <Button variant="secondary-btn" link="/artists">SEE PROGRAM</Button>
+        <div class="left-content">
+          <img src={`/img/kunstnere/${myData.image}`} alt="Kunstnerbillede" />
+          <div class="btn">
+            <Button variant="secondary-btn" link="/artists">SEE PROGRAM</Button>
+          </div>
         </div>
       </div>
       <div>
@@ -78,7 +80,14 @@ console.log(myData); // artist.name, artist.image osv.
     margin-bottom: 2rem;
   }
 
-  @media (max-width: 699px) {
+  .left-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  @media (max-width: 799px) {
     main {
       margin: 2rem;
     }
@@ -91,10 +100,11 @@ console.log(myData); // artist.name, artist.image osv.
       justify-content: center;
     }
   }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .artist_box {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 3rem;
       margin: 6rem;
       margin-top: 3rem;
     }
