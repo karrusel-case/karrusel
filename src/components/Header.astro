@@ -3,7 +3,7 @@ import "../styles/global.css";
 ---
 
 <header>
-  <a href="/"><img src="/img/karrusel-logo.png" alt="Logo" /></a>
+  <a href="/"><img src="img/karrusel-logo.png" alt="Logo" /></a>
   <nav>
     <ul class="menu">
       <li><a href="/">FRONTPAGE</a></li>
@@ -48,11 +48,11 @@ import "../styles/global.css";
     font-family: var(--font-h2);
     font-weight: 100;
     font-style: normal;
-    font-size: large;
+    font-size: var(--font-size-h5);
   }
 
   .menu li:last-child {
-    margin-right: 0;
+    margin-right: 4rem;
   }
 
   .menu a {
@@ -65,7 +65,7 @@ import "../styles/global.css";
   }
 
   .menu a:hover {
-    color: var(--rod);
+    color: var(--primary-color);
   }
 
   .burger {
@@ -130,7 +130,6 @@ import "../styles/global.css";
       top: 60px;
       left: 0;
       width: 100%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       z-index: 1;
     }
 
