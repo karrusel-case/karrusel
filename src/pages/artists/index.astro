@@ -28,11 +28,7 @@ const artists = await fetch(
       </div>
     </div>
 
-    <div class="date_grid">
-      <Button variant="primary-btn">TORSDAG</Button>
-      <Button variant="primary-btn">FREDAG</Button>
-     <Button variant="primary-btn">LØRDAG</Button>
-    </div>
+    
     <div class="program_box">
       <ul>
         {
@@ -43,6 +39,11 @@ const artists = await fetch(
       </ul>
     </div>
     <h2>PROGRAM</h2>
+    <div class="date_grid">
+      <Button variant="secondary-btn">TORSDAG</Button>
+      <Button variant="secondary-btn">FREDAG</Button>
+     <Button variant="secondary-btn">LØRDAG</Button>
+    </div>
   </main>
 </BaseLayout>
 
@@ -71,6 +72,10 @@ const artists = await fetch(
   }
 
   h2 {
+    text-align: center;
+  }
+
+  .date_grid {
     text-align: center;
   }
 </style>
