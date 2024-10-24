@@ -21,13 +21,7 @@ html {
   --font-h3: "Arimo";
   --font-p: "Arimo";
 
-  /* Typografi */
-  --font-size-h1: 128px;
-  --font-size-h2: 64px;
-  --font-size-h3: 48px;
-  --font-size-h4: 32px;
-  --font-size-h5: 24px;
-  --font-size-p: 20px;
+
 
   /* Spacing */
   --space-xxxs: 0.25rem;
@@ -96,4 +90,28 @@ button {
   font-family: var(--font-h3);
   color: var(--text-color);
   display: inline-block;
+}
+
+@media (max-width: 799px) {
+ /* Typografi */
+  html {
+    --font-size-h1: 48px;
+    --font-size-h2: 36px;
+    --font-size-h3: 24px;
+    --font-size-h4: 20px;
+    --font-size-h5: 16px;
+    --font-size-p: 16px;
+ 
+ } 
+}
+
+@media (min-width: 800px) {
+  html {
+    --font-size-h1: 128px;
+    --font-size-h2: 64px;
+    --font-size-h3: 48px;
+    --font-size-h4: 32px;
+    --font-size-h5: 24px;
+    --font-size-p: 20px;
+  } 
 }
