@@ -1,13 +1,21 @@
 ---
+// @ts-nocheck
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+import "../../styles/global.css";
 
 export async function getStaticPaths() {
-  const artists = await fetch("https://dddvlaithoterjghgqjy.supabase.co/rest/v1/Artist", {
-    method: "GET",
-    headers: {
-      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkZHZsYWl0aG90ZXJqZ2hncWp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDU5NjMsImV4cCI6MjA0NTA4MTk2M30.7vdc58-wObQrbkV38YpubtO1fR06ID2gX8iR1vMH_rw",
-    },
-  }).then((res) => res.json());
+  const artists = await fetch(
+    "https://dddvlaithoterjghgqjy.supabase.co/rest/v1/Artist",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkZHZsYWl0aG90ZXJqZ2hncWp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDU5NjMsImV4cCI6MjA0NTA4MTk2M30.7vdc58-wObQrbkV38YpubtO1fR06ID2gX8iR1vMH_rw",
+      },
+    }
+  ).then((res) => res.json());
 
   return artists.map((artist) => ({
     params: { artist: artist.slug }, // [artist]=artist.slug
@@ -20,5 +28,75 @@ console.log(myData); // artist.name, artist.image osv.
 ---
 
 <BaseLayout title={myData.name}>
-  <h1>{myData.name}</h1>
+  <main>
+    <h1>{myData.name}</h1>
+    <div class="artist_box">
+      <div>
+        <a href="/artists"><i></i> GO BACK</a>
+        <img src={myData.image} alt="Kunstnerbillede" />
+        <div class="btn">
+          <Button variant="secondary-btn" link="/artists">SEE PROGRAM</Button>
+        </div>
+      </div>
+      <div>
+        <h4>{myData.day} {myData.concert_time} AT {myData.stage}</h4>
+        <p>{myData.description}</p>
+      </div>
+    </div>
+  </main>
 </BaseLayout>
+
+<style>
+  h1 {
+    font-size: 68px;
+    text-align: center;
+    margin-top: var(--space-xl);
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-p);
+    font-weight: 800;
+  }
+  i {
+    border: solid var(--text-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  p {
+    line-height: 200%;
+    max-width: 565px;
+    min-height: 565px;
+    border: 5px solid var(--tertiary-color);
+    padding: 2rem;
+    font-size: 16px;
+  }
+  h4 {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 699px) {
+    main {
+      margin: 2rem;
+    }
+    h4 {
+      text-align: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media (min-width: 700px) {
+    .artist_box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 6rem;
+      margin-top: 3rem;
+    }
+  }
+</style>

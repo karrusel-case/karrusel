@@ -38,6 +38,13 @@ const { link } = Astro.props;
 
   .secondary-btn:hover {
     color: var(--text-color);
-    background-color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: 3px solid var(--text-color);
+  }
+
+  @media (max-width: 699px) {
+    a {
+      font-size: 32px;
+    }
   }
 </style>
