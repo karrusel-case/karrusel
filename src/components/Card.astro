@@ -7,4 +7,32 @@ console.log("artist", artist);
   <a href={"/artists/" + artist.slug}>
     <h3>{artist.name}</h3>
   </a>
+  <span class="dot">•</span>
 </li>
+
+<style>
+  h3 {
+    font-size: 36px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+  }
+  h3:hover {
+    color: var(--primary-color);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .dot {
+    margin: 0 30px;
+    color: #fff;
+    font-size: 40px;
+  }
+
+  li:last-child .dot {
+    display: none;
+  }
+</style>
