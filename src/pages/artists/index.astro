@@ -19,15 +19,6 @@ const artists = await fetch(
 <BaseLayout>
   <main>
     <h1>LINE-UP</h1>
-    <div class="artists">
-      <div class="big">
-        <h3></h3>
-      </div>
-      <div class="small">
-        <h4></h4>
-      </div>
-    </div>
-
     <div class="program_box">
       <ul>
         {
@@ -39,9 +30,15 @@ const artists = await fetch(
     </div>
     <h2>PROGRAM</h2>
     <div class="date_grid">
-      <Button variant="secondary-btn">TORSDAG</Button>
-      <Button variant="secondary-btn">FREDAG</Button>
-      <Button variant="secondary-btn">LØRDAG</Button>
+      <div class="btn">
+        <Button variant="secondary-btn">TORSDAG</Button>
+      </div>
+      <div class="btn">
+        <Button variant="secondary-btn">FREDAG</Button>
+      </div>
+      <div class="btn">
+        <Button variant="secondary-btn">LØRDAG</Button>
+      </div>
     </div>
     <img class="program" src="img/program.webp" alt="program" />
   </main>
@@ -78,14 +75,28 @@ const artists = await fetch(
   .date_grid {
     text-align: center;
   }
-  img {
-    width: 50%;
-    margin: auto;
-  }
 
   @media (max-width: 799px) {
     .program_box {
       margin: var(--space-xl);
+    }
+
+    .date_grid {
+      display: flex;
+      flex-direction: column;
+      min-width: 450px;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .date_grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    img {
+      width: 50%;
+      margin: auto;
     }
   }
 </style>

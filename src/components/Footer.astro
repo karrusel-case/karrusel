@@ -3,64 +3,100 @@
 ---
 
 <footer>
-    <div class="info">
-        <div>
-            <h5>OM OS</h5>
-            <p>Om Karrusel Festival <br> Samarbejdspartnere <br> Praktisk information</p>
-        </div>
-        <div>
-            <h5>KARRUSEL FESTIVAL GRUPPEN</h5>
-            <p>Karrusel Festival Gruppen Facebook</p>
-        </div>
-        <div>
-            <h5>KONTAKT OS</h5>
-            <p>info@nusnus.dk <br> Refshalevej 185, 1432 København <br> Job & praktik <br> Presse</p>
-        </div>
+  <div class="info">
+    <div>
+      <h5>OM OS</h5>
+      <p>
+        Om Karrusel Festival <br /> Samarbejdspartnere <br /> Praktisk information
+      </p>
     </div>
-    <hr>
-    <div class="bottom">
-    <img src="img/karrusel-logo.png" alt="Logo">
-    <img class="icons" src="/fb_icon.png" alt="Icon">
-    <img class="icons" src="/ig_icon.png" alt="Icon">
+    <div>
+      <h5>KARRUSEL FESTIVAL GRUPPEN</h5>
+      <p>Karrusel Festival Gruppen Facebook</p>
     </div>
-    <p>2024 Karrusel Festival Gruppen</p>
+    <div>
+      <h5>KONTAKT OS</h5>
+      <p>
+        info@nusnus.dk <br /> Refshalevej 185, 1432 København <br /> Job & praktik
+        <br /> Presse
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="bottom">
+    <img src="/img/karrusel-logo.png" alt="Logo" />
+    <div class="icon-section">
+      <img class="icons" src="/fb_icon.png" alt="Icon" />
+      <img class="icons" src="/ig_icon.png" alt="Icon" />
+    </div>
+  </div>
+  <p>2024 Karrusel Festival Gruppen</p>
 </footer>
 
 <style>
-    footer {
-        background-color: var(--bg-light);
-        padding-bottom: 2rem;
-    }
-    img {
-        height: 50px;
-        width: 70px;
-    }
-    .info {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding-bottom: 3rem;
-    }
-    p {
-        text-align: center;
-        font-family: var(--font-h2);
-    }
-    h5 {
-        text-align: center;
-        margin: 2rem;
-        padding-top: 1rem;
-    }
-    hr {
-       width: 100%;
-       size: 2;
-    }
-    .bottom {
-        display: grid;
-        grid-template-columns: 2fr 0.5fr 0.5fr 8fr;
-        margin: 3rem;
-    }
+  footer {
+    background-color: var(--bg-light);
+    padding-bottom: 2rem;
+  }
+  img {
+    height: 50px;
+    width: 70px;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 3rem;
+  }
+  p {
+    text-align: center;
+    font-family: var(--font-h2);
+  }
+  h5 {
+    text-align: center;
+    margin: 2rem;
+    padding-top: 1rem;
+    font-weight: bold;
+  }
+  hr {
+    width: 100%;
+    size: 2;
+    color: #fff;
+  }
 
-    .icons {
-        width: 26px;
-        height: 25px;
+  .icons {
+    width: 26px;
+    height: 25px;
+  }
+
+  @media (max-width: 799px) {
+    .info {
+      display: flex;
+      flex-direction: column;
     }
+  }
+
+  h5 {
+    margin: 1rem;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem;
+  }
+
+  .icon-section {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media (min-width: 800px) {
+    .bottom {
+      display: grid;
+      grid-template-columns: 2fr 0.5fr 0.5fr 8fr;
+      margin: 3rem;
+    }
+  }
 </style>
