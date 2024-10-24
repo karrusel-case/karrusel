@@ -4,16 +4,12 @@ import Button from "../../components/Button.astro";
 import Card from "../../components/Card.astro";
 import "../../styles/global.css";
 
-const artists = await fetch(
-  "https://dddvlaithoterjghgqjy.supabase.co/rest/v1/Artist",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkZHZsYWl0aG90ZXJqZ2hncWp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDU5NjMsImV4cCI6MjA0NTA4MTk2M30.7vdc58-wObQrbkV38YpubtO1fR06ID2gX8iR1vMH_rw",
-    },
-  }
-).then((res) => res.json());
+const artists = await fetch("https://dddvlaithoterjghgqjy.supabase.co/rest/v1/Artist", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkZHZsYWl0aG90ZXJqZ2hncWp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDU5NjMsImV4cCI6MjA0NTA4MTk2M30.7vdc58-wObQrbkV38YpubtO1fR06ID2gX8iR1vMH_rw",
+  },
+}).then((res) => res.json());
 ---
 
 <BaseLayout>
@@ -28,7 +24,6 @@ const artists = await fetch(
       </div>
     </div>
 
-    
     <div class="program_box">
       <ul>
         {
@@ -42,8 +37,9 @@ const artists = await fetch(
     <div class="date_grid">
       <Button variant="secondary-btn">TORSDAG</Button>
       <Button variant="secondary-btn">FREDAG</Button>
-     <Button variant="secondary-btn">LØRDAG</Button>
+      <Button variant="secondary-btn">LØRDAG</Button>
     </div>
+    <img class="program" src="img/program.webp" alt="program" />
   </main>
 </BaseLayout>
 
@@ -77,5 +73,9 @@ const artists = await fetch(
 
   .date_grid {
     text-align: center;
+  }
+  img {
+    width: 50%;
+    margin: auto;
   }
 </style>
